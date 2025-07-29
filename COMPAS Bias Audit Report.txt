@@ -1,0 +1,16 @@
+The COMPAS dataset, used for predicting the likelihood of recidivism, has raised major ethical concerns over racial bias. Using IBM’s AI Fairness 360 toolkit, we audited the dataset by comparing outcomes between Caucasian (privileged group) and African-American (unprivileged group) individuals.
+
+Our audit showed a Disparate Impact ratio < 0.8, suggesting biased selection rates against African-American individuals. The Statistical Parity Difference was also negative, confirming disproportionate outcomes. A basic logistic regression classifier, trained without bias correction, further reinforced these disparities.
+
+Evaluation of the model predictions revealed an Equal Opportunity Difference of -0.21 and Average Odds Difference of -0.17, indicating African-Americans were more likely to be falsely flagged as high-risk.
+
+Visualizations of recidivism outcomes by race also showed noticeable imbalances, reinforcing concerns that the model and data reinforce systemic bias.
+
+Recommendations:
+Apply fairness-aware techniques like Reweighing or Adversarial Debiasing to reduce disparities.
+
+Train models on more balanced or curated data sources.
+
+Regularly audit AI systems using multiple fairness metrics.
+
+This exercise highlights the urgent need for responsible AI design, especially in criminal justice. Fairness audits should be mandatory before deploying any predictive system that affects human lives.
